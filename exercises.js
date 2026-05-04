@@ -30,3 +30,14 @@ function validateAirtimePurchase(phoneNumber, amount, balance) {
 }
 console.log(validateAirtimePurchase("0715207383", 50, 20));
 console.log(validateAirtimePurchase("0720592674"));
+
+
+
+
+
+
+
+
+
+
+
