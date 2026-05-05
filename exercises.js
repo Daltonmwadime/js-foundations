@@ -1,7 +1,7 @@
 let simpleInterest = (principal * rate * time) / 100;
 console.log(simpleInterest); // answer is  100
 
-// EXERCISE 7
+// Airtime validation system 
 /* 1. Mobile Airtime Purchase Validator
    A telecom system needs to validate airtime purchases. Write a function that:
    - Takes phoneNumber, amount, and balance
