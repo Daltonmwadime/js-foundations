@@ -204,6 +204,42 @@ const classScores = [85, 42, 66, "Absent", 55, 102, 70];
 // - Process only valid scores
 // The expected output will show the total valid students, how many passed/failed, and the distribution of grades.
 console.log(processStudentGrades(classScores));
+
+
+
+/**
+ *Calculates final payable amount after applying supermarket discounts.
+ *Built for high reliability and maintainability, with comprehensive unit tests.
+ *Designed to handle various discount scenarios and edge cases effectively.
+ *payment amount is calculated based on the total price of items and applicable discounts.
+ *Discounts can be percentage-based or fixed amount, and may have conditions such as minimum purchase requirements.
+ *The function ensures that the final payable amount does not become negative after applying discounts.
+ */ 
+function calculateFinalAmount(items, discounts) {
+    //1. Calculate total price of items
+    //2. Apply discounts to the total price
+    //3. Ensure final amount is not negative
+    if (!Array.isArray(items) || !Array.isArray(discounts)) {
+        return "error:provide a valid array of items and discounts";
+    }
+    let total=0; 
+    for(let item of items){
+        if(typeof item.price !== 'number' || typeof item.quantity !== 'number'){
+            return "error: each item must have a valid price and quantity";
+        }
+        total += item.price * item.quantity;
+    }
+    
+    //2.Calculate using loops
+    for(let prices of prices){
+        //Skip invalid values(Defensive programming)
+        if(typeof prices !== 'number'){
+            continue;
+        }
+        total -= prices;
+    }
+    
+
  
 
 
