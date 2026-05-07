@@ -240,7 +240,58 @@ function calculateFinalAmount(items, discounts) {
 
  
 
+/**
+ * Ride-Hailing Fare & Acceptance System
+ * 
+ * Features:
+ * - Calculates ride fare
+ * - Applies surge pricing during peak hours
+ * - Determines whether driver should accept ride
+ */ 
+// Function to calculate fare
+function processRide(ride, driver) {
+    // Destructure ride data for cleaner access
+    const { distance, basefare, duration, perkmrate  } = ride;
+    // Destructure driver data for cleaner access
+    const { rating, availability } = driver;
 
+    // Basic Validation for ride and driver data
+    if (distance <= 0 || basefare < 0 || duration < 0 || perkmrate < 0) {
+        throw new Error("Invalid ride data");
+    }
+
+    // Calculate base fare
+    let fare = basefare + distance * perkmrate + duration * 0.5;
+
+   //Driver accept or reject the ride based on rating and availability
+    if (rating < 4.0 || !availability) {
+        return "Driver rejected the ride";
+    }
+
+    // Apply surge pricing during peak hours
+    if (surgeMultiplier > 1) {
+        fare *= surgeMultiplier;
+    }
+
+    return{
+        fare: fare.toFixed(2),
+        surge applied: ispeaktime? "Yes" : "No"
+        driver decision: "Accepted"
+    }
+    //Example ride object
+    const ride = {
+        distance: 10, // in kilometres
+        basefare: 5, // base fare in dollars
+        duration: 15, // duration in minutes
+        perkmrate: 1.5 // rate per kilometre in dollars
+    };
+    Example driver object
+    const driver = {
+        is available: true,
+        rating: 4.5 // driver rating out of 5
+    }
+    console.log(processRide(ride, driver));
+}
 
 
 
