@@ -1,5 +1,3 @@
-let simpleInterest = (principal * rate * time) / 100;
-console.log(simpleInterest); // answer is  100
 
 // Airtime validation system 
 /* 1. Mobile Airtime Purchase Validator
