@@ -124,54 +124,54 @@ console.log(y);
 
 // 2.assignment operators: =, +=, -=, *=, /=, %=
 // Assignment operators are used to assign values to variables. They can also be combined with arithmetic operators to perform an operation and assignment in one step.
-//1.assignment
+//1.assignment ( =)  
 let a = 5;
 console.log(a);
-//2.addition assignment
+//2.addition assignment( +=)    
 a += 3;
 console.log(a);
-//3.subtraction assignment
+//3.subtraction assignment ( -=)
 a -= 2; 
 console.log(a);
-//4.multiplication assignment
+//4.multiplication assignment ( *=)
 a *= 2;
 console.log(a); 
-//5.division assignment
+//5.division assignment ( /=)
 a /= 2;
 console.log(a);
-//6.modulus assignment
+//6.modulus assignment ( %=)
 a %= 3;
 console.log(a);
 
 
  // 3.comparison operators: ==, ===, !=, !==, >, <, >=, <=
  // Comparison operators are used to compare two values and return a boolean result (true or false).
-//1.greater than
+//1.greater than (>)
 console.log(5 > 3);
-//2.less than
+//2.less than (<)
 console.log(5 < 3);
-//3.greater than or equal to
+//3.greater than or equal to (>=)
 //OR at least one condition must be true.
 console.log(5 >= 3);
 console.log(4 >=4);
-//4.less than or equal to
+//4.less than or equal to (<=)
 console.log(5 <= 3);
-//5.(loosly)equal to
+//5.(loosly)equal to (==)
 //.cares about the values.
 console.log(5 == 5);
 console.log(parseInt("two"));   
-//6.not equal to
+//6.not equal to (!=)
 console.log(5 != 3);
-//7.strict equal to
+//7.strict equal to (===)
 //.only cares about 
 console.log(5 === 5);
-//8.strict not equal to
+//8.strict not equal to (!==)
 console.log(5 !== 3);
 
 // 4.logical operators: &&, ||, !
 // Logical operators are used to combine multiple boolean expressions and return a boolean result based on the logic of the expressions.
 
-//1.logical AND
+//1.logical AND (&&)
 //AND operator returns true if both operands are true, otherwise it returns false.
 //AND looks for the first false value and if it finds it, it returns false without evaluating the second operand. If it does not find any false value, it returns true.
 //In the logical reads from left to right, it evaluates the first operand and if it is false, it returns false without evaluating the second operand. If the first operand is true, it evaluates the second operand and returns its value.
@@ -190,7 +190,7 @@ console.log(true && true && "hey"); // hey In the expression true && true && "he
 
 
 
-//2.logical OR
+//2.logical OR (||)
 //OR operator returns true if at least one of the operands is true, otherwise it returns false.
 //In the case of true || false, the result is true because at least one of the operands is true.
 //In the case of false || false, the result is false because both operands are false.
@@ -216,13 +216,27 @@ const agenow = 19;
 
 console.log(agenow >= agelimit || balance >= price || isStaff);// In this example, the logical OR operator (||) is used to check if the person meets at least one of the three conditions: being of legal age (agenow >= agelimit), having sufficient balance (balance >= price), or being a staff member (isStaff). Since agenow is 19, which is less than the agelimit of 21, the first condition evaluates to false. However, the second and third conditions are not evaluated due to short-circuit evaluation, so the entire expression evaluates to false, indicating that the person does not meet any of the required conditions.
 
-//3.logical NOT
+//3.logical NOT (!)
 //NOT operator returns the opposite boolean value of the operand.
+//The NOT operator returns true if the operand is false, and false if the operand is true. It is used to negate a boolean value or expression.
 //In the case of !true, the result is false because the NOT operator negates the true value.
 //In the case of !false, the result is true because the NOT operator negates the false value.
 console.log(!true);
 console.log(!false);
-//4.logical XOR
+const greeting = "hello";
+console.log(!greeting);//In the expression !greeting, the logical NOT operator evaluates the truthiness of the variable greeting. Since greeting is a non-empty string, it is considered truthy in JavaScript. Therefore, the logical NOT operator negates this truthy value and returns false as the final result. This demonstrates how the logical NOT operator can be used to negate the truthiness of a value or expression.   
+console.log(); undefined 
+
+
+const agelimit = 21;
+const balance = 100;
+const price = 500;
+const isStaff = true;
+const agenow = 19;
+
+console.log(agenow <= agelimit && !isStaff && balance >= price);// In this example, the logical AND operator (&&) is used to check if the person meets all three conditions: being of legal age (agenow <= agelimit), not being a staff member (!isStaff), and having sufficient balance (balance >= price). Since agenow is 19, which is less than the agelimit of 21, the first condition evaluates to true. However, the second and third conditions are not evaluated due to short-circuit evaluation, so the entire expression evaluates to false, indicating that the person does not meet all of the required conditions.
+
+//4.logical XOR (^^)
 //XOR operator returns true if exactly one of the operands is true, otherwise it returns false.
 //In the case of true ^ false, the result is true because exactly one of the operands is true.
 console.log(true ^ false);
@@ -280,7 +294,6 @@ console.log(5 >> 1);
 //The unsigned right shift operator shifts all bits of the first operand to the right by the number of positions specified by the second operand. The vacated bits on the left are filled with 0s, regardless of the sign of the original number.
 //In the case of 5 >>> 1, the binary representation of 5 is 101. The unsigned right shift operation shifts all bits of 5 to the right by 1 position:
 console.log(5 >>> 1);   
-
 
 
 
